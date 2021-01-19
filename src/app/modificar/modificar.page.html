@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modificar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Nombre:</ion-label>
+  </ion-item>
+  
+  <ion-item>
+  <ion-input [(ngModel)] = "datos.nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>E-mail:</ion-label>
+    
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)] = "datos.email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Telefono</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)] = "datos.telefono"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Contraseña</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)] = "datos.pass"></ion-input>
+    </ion-item>
+
+  <ion-button color="dark" (click)="guardar()">Guardar</ion-button>
+
+
+</ion-content>

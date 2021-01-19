@@ -1,0 +1,40 @@
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Recent Conversations
+    </ion-list-header>
+
+    <ion-item-sliding *ngFor="let contacto of usuarios | async">
+      <ion-item >
+        <ion-avatar slot="start">
+          <img src="./avatar-finn.png">
+        </ion-avatar>
+        <ion-label (click)="editarUsuarioById(contacto.uid)">
+          <h2>{{contacto.nombre}}</h2>
+          <h3>{{contacto.email}}</h3>
+          <p>{{contacto.telefono}}</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options>
+        <ion-item-option color="primary" (click)="editarUsuarioById(contacto.uid)">
+          <ion-icon slot="start" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+          More
+        </ion-item-option>
+        <ion-item-option color="secondary" (click)="borrarContacto(contacto.uid)">
+          <ion-icon slot="start" name="delete"></ion-icon>
+          Archive
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+
+
+
+
+    </ion-list>
+
+
+</ion-content>
+
+
